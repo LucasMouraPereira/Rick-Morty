@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Rick and Morty Sans';
+  src: url('/assets/get_schwifty.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Detective';
+  src: url('/assets/Detective.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
