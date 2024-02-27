@@ -7,8 +7,6 @@ type CardProps = {
 }
 
 export const Card = ({ resident }: CardProps) => {
-  // console.log(resident)
-  // debugger
   return (
     <S.WrapperCard>
       <Image

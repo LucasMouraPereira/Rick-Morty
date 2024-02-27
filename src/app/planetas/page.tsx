@@ -1,8 +1,8 @@
 import { PlanetsProvider } from 'src/Providers/PlanetsContext'
 import { PlanetsContainer } from 'src/container/PlanetsContainer'
 
-async function getData() {
-  const res = await fetch('http://localhost:3000/api/dimensions', {
+async function getData(baseUrl: string) {
+  const res = await fetch(`${baseUrl}/api/dimensions`, {
     next: { revalidate: 60 },
   })
 
@@ -14,8 +14,8 @@ async function getData() {
 }
 
 const Planets = async () => {
-  const data = await getData()
-
+  const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost:3000'
+  const data = await getData(baseUrl)
   return (
     <PlanetsProvider dimensions={data}>
       <PlanetsContainer />
